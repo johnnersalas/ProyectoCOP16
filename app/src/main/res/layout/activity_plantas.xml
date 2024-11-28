@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Plantas">
+
+    <TextView
+        android:id="@+id/tv_titulo"
+        android:layout_width="297dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:fontFamily="@font/vollkorn_black"
+        android:lineSpacingExtra="-15dp"
+        android:text="Selecciona las\nplantas"
+        android:textAlignment="center"
+        android:textColor="#4CAF50"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/sp_familia"
+        android:layout_width="194dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_titulo"
+        app:layout_constraintTop_toBottomOf="@+id/tv_titulo" />
+
+    <Spinner
+        android:id="@+id/sp_tipo"
+        android:layout_width="194dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_titulo"
+        app:layout_constraintTop_toBottomOf="@+id/sp_familia" />
+
+    <Spinner
+        android:id="@+id/sp_especie"
+        android:layout_width="194dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_titulo"
+        app:layout_constraintTop_toBottomOf="@+id/sp_tipo" />
+
+    <Spinner
+        android:id="@+id/sp_caracteristicas"
+        android:layout_width="194dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_titulo"
+        app:layout_constraintTop_toBottomOf="@+id/sp_especie" />
+
+    <TextView
+        android:id="@+id/tv_familia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/vollkorn_black"
+        android:lineSpacingExtra="-25dp"
+        android:text="Familia"
+        android:textAlignment="center"
+        android:textColor="#81C784"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toStartOf="@+id/sp_familia"
+        app:layout_constraintStart_toStartOf="@+id/tv_titulo"
+        app:layout_constraintTop_toBottomOf="@+id/tv_titulo" />
+
+    <TextView
+        android:id="@+id/tv_tipo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/vollkorn_black"
+        android:lineSpacingExtra="-25dp"
+        android:text="Tipo"
+        android:textAlignment="center"
+        android:textColor="#81C784"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toStartOf="@+id/sp_tipo"
+        app:layout_constraintStart_toStartOf="@+id/tv_titulo"
+        app:layout_constraintTop_toBottomOf="@+id/sp_familia" />
+
+    <TextView
+        android:id="@+id/tv_especie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/vollkorn_black"
+        android:lineSpacingExtra="-25dp"
+        android:text="Especie"
+        android:textAlignment="center"
+        android:textColor="#81C784"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toStartOf="@+id/sp_especie"
+        app:layout_constraintStart_toStartOf="@+id/tv_titulo"
+        app:layout_constraintTop_toBottomOf="@+id/sp_tipo" />
+
+    <TextView
+        android:id="@+id/tv_caracteristicas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/vollkorn_black"
+        android:lineSpacingExtra="-25dp"
+        android:text="Características"
+        android:textAlignment="center"
+        android:textColor="#81C784"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toStartOf="@+id/sp_caracteristicas"
+        app:layout_constraintStart_toStartOf="@+id/tv_titulo"
+        app:layout_constraintTop_toBottomOf="@+id/sp_especie" />
+
+    <Button
+        android:id="@+id/btn_visualizar"
+        android:layout_width="157dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="24dp"
+        android:onClick="onClickVisualizar"
+        android:text="Visualizar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sp_caracteristicas" />
+
+    <ImageView
+        android:id="@+id/img_planta"
+        android:layout_width="285dp"
+        android:layout_height="195dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_visualizar" />
+
+    <ScrollView
+        android:layout_width="300dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_planta">
+
+        <TextView
+            android:id="@+id/tv_detalles"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Detalles de la planta seleccionada"
+            android:textAlignment="center" />
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

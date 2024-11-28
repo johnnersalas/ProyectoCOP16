@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:id="@+id/detalleUsuario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:fontFamily="@font/vollkorn_black"
+        android:lineSpacingExtra="-15dp"
+        android:text="Selecciona las\nespecies"
+        android:textAlignment="center"
+        android:textColor="#FF5722"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:padding="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:src="@drawable/cisne_negro" />
+
+                <Button
+                    android:id="@+id/seccionAnimales"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Accede al catálogo" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="200dp"
+                    android:src="@drawable/manzano" />
+
+                <Button
+                    android:id="@+id/seccionPlantas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Accede al catálogo" />
+
+                <Button
+                    android:id="@+id/logout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="60dp"
+                    android:onClick="acceso"
+                    android:text="Salir"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="@+id/gifImageView"
+                    app:layout_constraintStart_toStartOf="@+id/gifImageView"
+                    app:layout_constraintTop_toBottomOf="@+id/gifImageView" />
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+
+</LinearLayout>
